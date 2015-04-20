@@ -13,6 +13,8 @@ printhelp()
 	cat << "END"
 
         -h --help       this message
+
+Does print if the parameters are numeric or not.
 END
 }
 
