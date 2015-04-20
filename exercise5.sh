@@ -4,7 +4,7 @@ source ./functions.sh
 
 printusage()
 {
-	echo "usage: $0 [-h] file [algorithm list] ..."
+	echo "usage: $0 [-hv] file [algorithm list] ..."
 }
 
 printhelp()
