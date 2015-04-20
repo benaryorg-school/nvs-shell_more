@@ -6,3 +6,11 @@ isint()
 	return 0
 }
 
+VERBOSE=false
+debug()
+{
+	if $VERBOSE;then
+		echo $@
+	fi
+}
+
