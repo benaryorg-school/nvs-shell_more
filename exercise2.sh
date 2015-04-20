@@ -13,11 +13,11 @@ printhelp()
 	cat << "END"
 
         -h --help       this message
-        -o              output zip file
+        -o              output archive
         -d              input directory
 
 Saves all Java source files in your home directory (or the provided directory)
-into a zip file.
+into an archive.
 END
 }
 
