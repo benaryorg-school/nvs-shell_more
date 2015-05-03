@@ -55,5 +55,5 @@ while [ ! -z "$1" ];do
 done
 
 FILES=$(find $DIRECTORY -regex '.+\.java' -mtime -8)
-tar -cf $FILES $OUTPUTFILE > /dev/null 2>&1
+tar -cf $OUTPUTFILE $FILES > /dev/null 2>&1
 
