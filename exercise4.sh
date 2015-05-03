@@ -35,6 +35,8 @@ done
 DESTINATION="$1"
 shift
 
+echo > $DESTINATION
+
 for f in "$@";do
 	if [ -r $f ];then
 		echo --- $f --- >> $DESTINATION
