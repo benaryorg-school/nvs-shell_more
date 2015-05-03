@@ -34,6 +34,7 @@ while [ ! -z "$1" ];do
 			shift
 			if [ -z "$1" ];then
 				printusage
+				exit 1
 			fi
 			DIRECTORY="$1"
 		;;
@@ -41,6 +42,7 @@ while [ ! -z "$1" ];do
 			shift
 			if [ -z "$1" ];then
 				printusage
+				exit 1
 			fi
 			OUTPUTFILE="$1"
 		;;
