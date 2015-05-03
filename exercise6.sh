@@ -14,15 +14,12 @@ printhelp()
 
         -h --help       this message
         -v --verbose    verbose output
+        -p --prefix     set prefix
+        -s --suffix     set suffix
 
 Moves files with pattern $prefix(xx)$suffix to $prefix(xx-1)$suffix.
 END
 }
-
-if [ -z "$1" ] || [ ! -d "$1" ];then
-	printusage
-	exit 1
-fi
 
 PREFIX=loesung.
 SUFFIX=.dir
@@ -36,7 +33,27 @@ while [ ! -z "$1" ];do
 		"-v"|"--verbose")
 			VERBOSE=true
 		;;
+		"-p"|"--prefix")
+			shift
+			if [ -z "$1" ];then
+				printusage
+				exit 1
+			fi
+			PREFIX="$1"
+		;;
+		"-s"|"--suffix")
+			shift
+			if [ -z "$1" ];then
+				printusage
+				exit 1
+			fi
+			SUFFIX="$1"
+		;;
 		*)
+			if [ ! -z "$DIR" ] || [ -z "$1" ] || [ ! -d "$1" ];then
+				printusage
+				exit 1
+			fi
 			DIR=$1
 		;;
 	esac
