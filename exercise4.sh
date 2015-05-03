@@ -27,7 +27,7 @@ DESTINATION="$1"
 shift
 
 for f in "$@";do
-	if [ -f $f ];then
+	if [ -r $f ];then
 		echo --- $f --- >> $DESTINATION
 		cat $f >> $DESTINATION
 	else
