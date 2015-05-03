@@ -23,6 +23,15 @@ if [ -z $1 ];then
 	exit 1
 fi
 
+for f in "$@";do
+	case "$f" in
+		"-h"|"--help")
+			printhelp
+			exit 0
+		;;
+	esac
+done
+
 DESTINATION="$1"
 shift
 
